@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laundry.OrderController">
+   <children>
+      <TextField fx:id="txt_NoTransaksi" focusTraversable="false" layoutX="108.0" layoutY="21.0" promptText="No Transaksi" />
+      <Label layoutX="14.0" layoutY="25.0" text="No Transaksi" />
+      <Label layoutX="14.0" layoutY="53.0" text="ID Customer" />
+      <Label layoutX="14.0" layoutY="82.0" text="Nama Customer" />
+      <Label layoutX="421.0" layoutY="25.0" text="Tanggal" />
+      <TextField fx:id="txt_IDCustomer" layoutX="108.0" layoutY="49.0" onKeyPressed="#showTableViewCustomer" promptText="ID Customer..." />
+      <TextField fx:id="txt_NamaCustomer" layoutX="108.0" layoutY="78.0" promptText="Nama Customer..." />
+      <TextField fx:id="txt_date" editable="false" layoutX="471.0" layoutY="21.0" prefHeight="25.0" prefWidth="105.0" promptText="Tanggal..." />
+      <Label layoutX="14.0" layoutY="118.0" text="ID Barang" />
+      <Label layoutX="120.0" layoutY="118.0" text="Jenis Jasa" />
+      <Label layoutX="358.0" layoutY="118.0" text="Harga" />
+      <Label layoutX="480.0" layoutY="118.0" text="Jumlah" />
+      <Label layoutX="240.0" layoutY="118.0" text="Nama Barang" />
+      <TextField fx:id="txt_IDBarang" editable="false" layoutX="13.0" layoutY="140.0" onKeyPressed="#showTableViewService" prefHeight="25.0" prefWidth="87.0" promptText="ID_Barang" />
+      <TextField fx:id="txt_jenis_jasa" editable="false" layoutX="118.0" layoutY="140.0" prefHeight="25.0" prefWidth="105.0" promptText="Jenis Jasa" />
+      <TextField fx:id="txt_nama_jenis" editable="false" layoutX="240.0" layoutY="140.0" prefHeight="25.0" prefWidth="105.0" promptText="Nama Jenis" />
+      <TextField fx:id="txt_harga" editable="false" layoutX="358.0" layoutY="140.0" prefHeight="25.0" prefWidth="105.0" promptText="Harga" />
+      <TextField fx:id="txt_jumlah" layoutX="480.0" layoutY="140.0" prefHeight="25.0" prefWidth="105.0" promptText="Jumlah" />
+      <TableView fx:id="table_order" layoutX="14.0" layoutY="218.0" prefHeight="182.0" prefWidth="611.0">
+         <columns>
+            <TableColumn fx:id="column_NoTransaksi" prefWidth="78.66665649414062" text="No Transaksi" />
+            <TableColumn fx:id="column_NoIDBarang" prefWidth="97.33331298828125" text="ID Barang" />
+            <TableColumn fx:id="column_jenisJasa" prefWidth="75.0" text="Jenis Jasa" />
+            <TableColumn fx:id="column_NamaBarang" prefWidth="151.33331298828125" text="Nama Barang" />
+            <TableColumn fx:id="column_Jumlah" prefWidth="62.66668701171875" text="Jumlah" />
+            <TableColumn fx:id="column_Harga" prefWidth="91.33331298828125" text="Harga" />
+            <TableColumn fx:id="column_Total" prefWidth="55.99993896484375" text="Total" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_tambah" layoutX="13.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#showMember" prefHeight="17.0" prefWidth="67.0" text="Tambah" />
+      <Button fx:id="btn_hapus" layoutX="92.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Hapus" />
+      <Button fx:id="btn_simpan" layoutX="16.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#insertButton" prefHeight="40.0" prefWidth="61.0" text="Simpan" />
+      <Pane layoutX="82.0" layoutY="410.0" prefHeight="40.0" prefWidth="229.0" style="-fx-background-color: #FA8072;">
+         <children>
+            <Label fx:id="lbl_price" layoutY="3.0" prefHeight="34.0" prefWidth="229.0" text="Rp. 0">
+               <font>
+                  <Font name="Bodoni MT Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="390.0" layoutY="413.0" text="Total Bayar" />
+      <Label layoutX="390.0" layoutY="446.0" text="Bayar" />
+      <Label layoutX="391.0" layoutY="482.0" text="Kembalian" />
+      <TextField fx:id="txt_totalBayar" editable="false" layoutX="458.0" layoutY="410.0" prefHeight="25.0" prefWidth="131.0" promptText="0" />
+      <TextField fx:id="txt_bayar" layoutX="458.0" layoutY="443.0" prefHeight="25.0" prefWidth="131.0" promptText="0" />
+      <TextField fx:id="txt_kembalian" editable="false" layoutX="458.0" layoutY="478.0" onMouseClicked="#kembalian" prefHeight="25.0" prefWidth="131.0" promptText="0" />
+      <TextField fx:id="txt_total" editable="false" layoutX="480.0" layoutY="183.0" onMouseClicked="#columnTotalTable" prefHeight="25.0" prefWidth="105.0" promptText="Click for Total" />
+      <Label layoutX="480.0" layoutY="165.0" text="Total" />
+      <Pane fx:id="pane_service" layoutX="-6.0" layoutY="117.0" prefHeight="253.0" prefWidth="642.0" style="-fx-background-color: black;" visible="false" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-1.0">
+         <children>
+            <TableView fx:id="table_service" layoutX="20.0" layoutY="14.0" onMouseClicked="#getRowTable" prefHeight="173.0" prefWidth="611.0">
+              <columns>
+                <TableColumn fx:id="colunNama_JenisJasa" editable="false" prefWidth="116.66668319702148" text="Nama Jenis Jasa" />
+                <TableColumn fx:id="columnNamaBarang_JenisJasa" editable="false" prefWidth="109.33328247070312" text="Nama barang" />
+                  <TableColumn fx:id="columnBerat_JenisJasa" editable="false" prefWidth="75.0" text="Berat" />
+                  <TableColumn fx:id="columnHarga_JenisJasa" editable="false" prefWidth="75.0" text="Harga" />
+                  <TableColumn fx:id="colom_idJenisJasa" prefWidth="75.0" text="id_Jenis_jasa" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnPilih" layoutX="513.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#Cari_Kode" prefHeight="25.0" prefWidth="56.0" text="Pilih" />
+            <Button fx:id="btnBatal" layoutX="576.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#btnBatal" prefHeight="25.0" prefWidth="56.0" text="Batal" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_customer" layoutY="117.0" prefHeight="282.0" prefWidth="635.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btnBatal_Customer" layoutX="570.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#btnBatalCustomer" prefHeight="25.0" prefWidth="51.0" text="Batal" />
+            <Button fx:id="btnPilih_Customer" layoutX="512.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#setBtnPilih_Customer" prefHeight="25.0" prefWidth="51.0" text="Pilih" />
+            <TableView fx:id="table_member" layoutX="8.0" layoutY="14.0" onMouseClicked="#getRowTable" prefHeight="204.0" prefWidth="619.0" styleClass="tableView">
+               <columns>
+                  <TableColumn fx:id="id_column" prefWidth="164.66665172576904" style="-fx-background-color: white;" text="id" />
+                  <TableColumn fx:id="firstName_column" prefWidth="240.6666717529297" style="-fx-background-color: white;" text="FIRST NAME" />
+                  <TableColumn fx:id="lastName_column" prefWidth="129.3333282470703" style="-fx-background-color: white;" text="LAST NAME" />
+                  <TableColumn fx:id="noHp_column" editable="false" prefWidth="91.99993896484375" resizable="false" style="-fx-background-color: white;" text="NO.HP" visible="false" />
+                  <TableColumn fx:id="alamat_column" minWidth="0.0" prefWidth="106.66668701171875" resizable="false" style="-fx-background-color: white;" text="ALAMAT" visible="false" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

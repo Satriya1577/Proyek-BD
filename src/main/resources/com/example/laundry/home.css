@@ -1,0 +1,95 @@
+.pane{
+    -fx-background-image: url('image/walpaper.jpg');
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-position: relative;
+        -fx-background-size: auto;
+}
+.pane2{
+    -fx-background-color: black;
+    -fx-opacity:0.2;
+}
+.button{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/laundry-machine.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button:hover{
+    -fx-background-color: white;
+}
+.button:pressed{
+    -fx-background-color: #D4D3D2;
+}
+.button2{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/membership-card.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+
+.button2{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/membership-card.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button2{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/membership-card.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button3{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/completed-task.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button4{
+    -fx-background-radius: 20px;
+    -fx-background-image:url('image/staff.png');
+    -fx-background-size: 80px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button5{
+    -fx-background-color: #c9c8c5;
+    -fx-background-radius: 5px;
+    -fx-background-image:url('image/user.png');
+    -fx-background-size: 20px;
+    -fx-background-position: center;
+    -fx-position:relative;
+    -fx-background-repeat: no-repeat;
+    -fx-background-insets: black;
+    -fx-align: center;
+}
+.button5:hover{
+    -fx-background-color: white;
+}
+.button5:pressed{
+    -fx-background-color: #c9c8c5;
+}

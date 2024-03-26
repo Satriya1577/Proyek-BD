@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="286.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.member.EditJasaPageController">
+   <children>
+      <Label layoutX="54.0" layoutY="39.0" text="Jenis jasa" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="39.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="85.0" text="Item" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="129.0" text="Berat" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="129.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="175.0" text="Harga" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="175.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="jenisJasa" layoutX="161.0" layoutY="41.0" AnchorPane.rightAnchor="54.400000000000006" />
+      <TextField fx:id="item" layoutX="161.0" layoutY="86.0" AnchorPane.rightAnchor="54.39999999999998" />
+      <TextField fx:id="berat" layoutX="161.0" layoutY="130.0" AnchorPane.rightAnchor="54.39999999999998" />
+      <TextField fx:id="harga" layoutX="161.0" layoutY="176.0" AnchorPane.rightAnchor="54.39999999999998" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="231.0" mnemonicParsing="false" onAction="#onOkPressed" prefHeight="26.0" prefWidth="60.0" text="OK" AnchorPane.rightAnchor="105.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="231.0" mnemonicParsing="false" onAction="#onCancelPressed" prefHeight="26.0" prefWidth="60.0" text="CANCEL" AnchorPane.leftAnchor="105.0" />
+   </children>
+</AnchorPane>

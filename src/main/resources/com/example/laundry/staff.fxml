@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laundry.StaffController">
+    <children>
+        <VBox layoutX="13.0" layoutY="24.0" prefHeight="200.0" prefWidth="124.0" spacing="15.0">
+            <children>
+                <Label text="Nama Depan:">
+                    <font>
+                        <Font size="13.0" />
+                    </font></Label>
+                <Label text="Nama Belakang:">
+                    <font>
+                        <Font size="13.0" />
+                    </font></Label>
+                <Label text="Alamat:">
+                    <font>
+                        <Font size="13.0" />
+                    </font></Label>
+                <Label text="No Handphone:">
+                    <font>
+                        <Font size="13.0" />
+                    </font></Label>
+                <Label text="Tanggal Masuk Kerja:">
+                    <font>
+                        <Font size="13.0" />
+                    </font></Label>
+            </children>
+        </VBox>
+        <VBox layoutX="166.0" layoutY="26.0" prefHeight="242.0" prefWidth="233.0" spacing="9.0">
+            <children>
+                <TextField fx:id="txtNamaDepan" />
+                <TextField fx:id="txtNamaBelakang" />
+                <TextField fx:id="txtAlamat" />
+                <TextField fx:id="txtNoHp" />
+                <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="240.0" />
+                <TextField fx:id="txtStaffID" editable="false" visible="false" />
+            </children>
+        </VBox>
+        <TableView fx:id="table" layoutX="424.0" layoutY="61.0" onMouseClicked="#getRowTable" prefHeight="299.0" prefWidth="663.0">
+            <columns>
+                <TableColumn fx:id="staffIdColumn" editable="false" prefWidth="70.0" text="Staff ID" visible="false" />
+                <TableColumn fx:id="namaDepanColumn" editable="false" prefWidth="142.66665649414062" text="Nama Depan" />
+                <TableColumn fx:id="namaBelakangColumn" editable="false" prefWidth="153.33331298828125" text="Nama Belakang" />
+                <TableColumn fx:id="alamatColumn" editable="false" prefWidth="130.0" text="Alamat" />
+                <TableColumn fx:id="noHpColumn" editable="false" prefWidth="123.3333740234375" text="No Handphone" />
+                <TableColumn fx:id="tanggalMasukColumn" editable="false" prefWidth="113.3333740234375" text="Tanggal Masuk" />
+            </columns>
+        </TableView>
+        <Button fx:id="ButtonInsert" layoutX="44.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #00ff00;" text="Insert" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Button fx:id="ButtonUpdate" layoutX="169.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #FFA500;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Button fx:id="ButtonDelete" layoutX="297.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #0000FF;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Button fx:id="ButtonClear" layoutX="125.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color:#FF0000;" text="Clear" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="424.0" layoutY="26.0" text="Search Nama Staff:">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="filterField" layoutX="553.0" layoutY="22.0" prefHeight="26.0" prefWidth="421.0" />
+    </children>
+</AnchorPane>

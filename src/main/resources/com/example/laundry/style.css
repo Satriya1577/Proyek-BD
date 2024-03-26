@@ -1,0 +1,23 @@
+.pane{
+    -fx-background-image: url('image/walpaper.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-position: relative;
+    -fx-background-size: 210%;
+}
+.pane2{
+    -fx-background-color: white;
+}
+.label{
+    -fx-opacity: 100%;
+}
+.button{
+    -fx-background-color: #ca444f;
+    -fx-background-radius:10px;
+}
+.button:hover{
+    -fx-background-color: red;
+}
+.button:pressed{
+    -fx-background-color: #ca444f;
+}

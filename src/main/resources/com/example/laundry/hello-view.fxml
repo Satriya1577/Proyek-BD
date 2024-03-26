@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laundry.HelloController">
+   <children>
+      <Pane layoutX="294.0" layoutY="-7.0" prefHeight="601.0" prefWidth="515.0" styleClass="pane" stylesheets="@style.css" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="294.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-7.0" />
+      <Pane layoutY="-11.0" prefHeight="601.0" prefWidth="294.0" styleClass="pane2" stylesheets="@style.css">
+         <children>
+            <Label layoutX="101.0" layoutY="121.0" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT" size="38.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="51.0" layoutY="205.0" prefHeight="25.0" prefWidth="189.0" promptText="Masukan Username..." />
+            <Label layoutX="51.0" layoutY="186.0" text="Username" />
+            <Label layoutX="53.0" layoutY="242.0" text="Password" />
+            <Button fx:id="button" layoutX="119.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#ConnectDB" prefHeight="47.0" prefWidth="53.0" text="&gt;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="45.0" layoutY="443.0" prefHeight="16.0" prefWidth="140.0" text="Don't have a account?" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="459.0" text="Click here for registration" textAlignment="CENTER" textFill="#ff1d1d">
+               <font>
+                  <Font name="Bodoni MT" size="11.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password" layoutX="51.0" layoutY="262.0" prefHeight="25.0" prefWidth="189.0" promptText="Masukan Password..." />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

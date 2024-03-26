@@ -1,0 +1,50 @@
+.pane{
+    -fx-background-image: url('image/walpaper.jpg');
+    -fx-background-size: 140%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+.pane2{
+    -fx-background-color: black;
+    -fx-opacity : 0.2;
+}
+.buttonSave{
+    -fx-background-color:rgba(0,151,255);
+}
+.buttonSave:hover{
+    -fx-background-color:rgba(0,151,255, 0.5);
+}
+.buttonSave:pressed{
+    -fx-background-color:rgba(0,151,255);
+}
+.buttonEdit{
+    -fx-background-color:rgba(253,249,3);
+}
+.buttonEdit:hover{
+    -fx-background-color:rgba(253,249,3, 0.5);
+}
+.buttonEdit:pressed{
+    -fx-background-color:rgba(253,249,3);
+}
+.buttonDelete{
+    -fx-background-color:rgba(213,61,58);
+}
+.buttonDelete:hover{
+    -fx-background-color:rgba(213,61,58, 0.5);
+}
+.buttonDelete:pressed{
+    -fx-background-color:rgba(213,61,58);
+}
+.buttonClear{
+    -fx-background-color:rgba(0,0,0);
+}
+.buttonClear:hover{
+    -fx-background-color:rgba(0,0,0, 0.5);
+}
+.buttonClear:pressed{
+    -fx-background-color:rgba(0,0,0);
+}
+.tableView{
+    -fx-background-color : rgba(255,255,255);
+    -fx-background-radius: 5px;
+}
